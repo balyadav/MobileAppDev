@@ -6,8 +6,7 @@
 //  Copyright © 2017 CarnegieMellonUniversity. All rights reserved.
 //
 
-#import "AddViewController.h"
-
+#import "AddViewController.h";
 @interface AddViewController ()
 
 @end
@@ -44,7 +43,7 @@
     
     // Get Master view controller
     ThirdTableViewController *masterController =(ThirdTableViewController*)[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
-    self.navigationController.viewControllers.count-1;
+//    self.navigationController.viewControllers.count-1;
     
     [masterController insertNewObjectEventName:eventName eventTime:eventTime eventLocation:eventLocation];
     

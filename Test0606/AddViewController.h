@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ThirdTableViewController.h"
 
 @interface AddViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *eventName;

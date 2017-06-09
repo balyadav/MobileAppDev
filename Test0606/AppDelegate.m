@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ThirdTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,7 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
 ///CoreData
 - (void)saveContext{
     NSError *error = nil;
@@ -48,7 +50,9 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"DataModel" withExtension:@"momd"];    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];    return _managedObjectModel;
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"DataModel" withExtension:@"momd"];
+    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    return _managedObjectModel;
 }
 
 // Returns the persistent store coordinator for the application.
@@ -60,7 +64,8 @@
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-    }        return _persistentStoreCoordinator;
+    }
+    return _persistentStoreCoordinator;
 }
 
 

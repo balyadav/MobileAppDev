@@ -8,7 +8,6 @@
 
 #import <CoreData/CoreData.h>
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
 @interface Event : NSManagedObject
 @property (nonatomic, retain) NSString *eventName;
