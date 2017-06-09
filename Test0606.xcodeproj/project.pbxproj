@@ -19,6 +19,8 @@
 		A975CBE51EEADAA1004F785F /* CustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A975CBE41EEADAA1004F785F /* CustomTextView.m */; };
 		A975CBE81EEAF4DD004F785F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A975CBE61EEAF4DD004F785F /* DataModel.xcdatamodeld */; };
 		A975CBEB1EEAF684004F785F /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = A975CBEA1EEAF684004F785F /* Event.m */; };
+		A975CBEE1EEAFBF6004F785F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A975CBED1EEAFBF6004F785F /* AddViewController.m */; };
+		A975CBF41EEB0438004F785F /* ThirdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A975CBF31EEB0438004F785F /* ThirdTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,10 @@
 		A975CBE71EEAF4DD004F785F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		A975CBE91EEAF684004F785F /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		A975CBEA1EEAF684004F785F /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		A975CBEC1EEAFBF6004F785F /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		A975CBED1EEAFBF6004F785F /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		A975CBF21EEB0438004F785F /* ThirdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTableViewController.h; sourceTree = "<group>"; };
+		A975CBF31EEB0438004F785F /* ThirdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +124,14 @@
 				A905E8FA1EE9D6AB003C822F /* AppDelegate.h */,
 				A905E8FB1EE9D6AB003C822F /* AppDelegate.m */,
 				A905E9031EE9D6AB003C822F /* Main.storyboard */,
+				A975CBEC1EEAFBF6004F785F /* AddViewController.h */,
+				A975CBED1EEAFBF6004F785F /* AddViewController.m */,
 				A975CBE01EEAD8F7004F785F /* FirstViewController.h */,
 				A975CBE11EEAD8F7004F785F /* FirstViewController.m */,
 				A905E96C1EE9EC27003C822F /* SecondTableViewController.h */,
 				A905E96D1EE9EC27003C822F /* SecondTableViewController.m */,
+				A975CBF21EEB0438004F785F /* ThirdTableViewController.h */,
+				A975CBF31EEB0438004F785F /* ThirdTableViewController.m */,
 				A975CBE31EEADAA1004F785F /* CustomTextView.h */,
 				A975CBE41EEADAA1004F785F /* CustomTextView.m */,
 				A905E9061EE9D6AB003C822F /* Assets.xcassets */,
@@ -292,8 +302,10 @@
 				A905E8FC1EE9D6AB003C822F /* AppDelegate.m in Sources */,
 				A905E8F91EE9D6AB003C822F /* main.m in Sources */,
 				A975CBE81EEAF4DD004F785F /* DataModel.xcdatamodeld in Sources */,
+				A975CBF41EEB0438004F785F /* ThirdTableViewController.m in Sources */,
 				A905E96E1EE9EC27003C822F /* SecondTableViewController.m in Sources */,
 				A975CBE21EEAD8F7004F785F /* FirstViewController.m in Sources */,
+				A975CBEE1EEAFBF6004F785F /* AddViewController.m in Sources */,
 				A975CBEB1EEAF684004F785F /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -155,18 +155,34 @@
         <!--Root View Controller-->
         <scene sceneID="yFG-FX-TYe">
             <objects>
-                <tableViewController id="xIb-e5-7Q1" sceneMemberID="viewController">
+                <tableViewController id="xIb-e5-7Q1" customClass="ThirdTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8aq-5Q-EC0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mv6-Gd-f7h">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" textLabel="nMR-kf-eMz" detailTextLabel="rRE-NP-x1B" style="IBUITableViewCellStyleSubtitle" id="mv6-Gd-f7h">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mv6-Gd-f7h" id="BbW-5q-cfh">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nMR-kf-eMz">
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rRE-NP-x1B">
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -176,7 +192,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="egl-Zh-edz">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="P5Z-I4-Vlc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="P5Z-I4-Vlc">
                             <connections>
                                 <segue destination="h15-Tz-Uch" kind="push" id="0hw-Vu-aFy"/>
                             </connections>
@@ -188,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="-144" y="1326"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="LOa-gx-uAf">
             <objects>
-                <viewController id="h15-Tz-Uch" sceneMemberID="viewController">
+                <viewController id="h15-Tz-Uch" customClass="AddViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ExL-s3-f1m"/>
                         <viewControllerLayoutGuide type="bottom" id="92F-7G-SFw"/>
@@ -218,7 +234,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YIO-Xf-86b">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YIO-Xf-86b">
                                 <rect key="frame" x="136" y="79" width="171" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -236,12 +252,20 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFA-xG-0xo">
                                 <rect key="frame" x="143" y="377" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveEvent:" destination="h15-Tz-Uch" eventType="touchUpInside" id="MzD-1j-VvU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="hah-iM-t6n"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="eventDate" destination="mY1-qG-XwK" id="P8i-tm-icy"/>
+                        <outlet property="eventLocation" destination="qgn-Zb-ikJ" id="8m1-dy-zDV"/>
+                        <outlet property="eventName" destination="YIO-Xf-86b" id="gFG-oi-ieQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3OP-ez-2Pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
