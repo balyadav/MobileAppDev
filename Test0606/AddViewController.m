@@ -41,11 +41,23 @@
     NSString *eventTime=_eventDate.text;
     NSString *eventLocation=_eventLocation.text;
     
+    if([eventLocation length] == 0){
+        eventLocation = @"TBD";
+    }
+    
+    if([eventTime length] == 0){
+        NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        eventTime = [dateFormatter stringFromDate:[NSDate date]];
+    }
+    
     // Get Master view controller
     ThirdTableViewController *masterController =(ThirdTableViewController*)[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
 //    self.navigationController.viewControllers.count-1;
     
     [masterController insertNewObjectEventName:eventName eventTime:eventTime eventLocation:eventLocation];
+    
+    NSLog(@"User entered:\n Event Name: %@\n Event Date: %@\n Event Location: %@\n", eventName, eventTime, eventLocation);
     
     [self.navigationController popViewControllerAnimated:YES];
 }
